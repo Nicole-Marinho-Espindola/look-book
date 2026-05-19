@@ -1,0 +1,1 @@
+export { TrendsPage as default } from "@/features/trends/pages";
