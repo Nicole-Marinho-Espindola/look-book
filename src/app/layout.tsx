@@ -1,5 +1,6 @@
 import React from "react";
 import "./globals.css";
+import Header from "@/shared/components/header/index";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="container">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
