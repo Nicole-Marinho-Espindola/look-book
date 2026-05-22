@@ -1,6 +1,7 @@
 import React from "react";
 import "./globals.css";
-import Header from "@/shared/components/header/index";
+import Navbar from "@/shared/components/header/navbar";
+import Sidebar from "@/shared/components/header/sidebar";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="container">
-          <Header />
-          {children}
+        <div className=" container">
+          <Navbar />
+          <div className="flex gap-x-5">
+            <Sidebar />
+            {children}
+          </div>
         </div>
       </body>
     </html>

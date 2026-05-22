@@ -1,21 +1,21 @@
 import { Bell, Search, User } from "lucide-react";
 import hanger from "@/shared/icons/clothes-hanger.svg";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-4 left-1/2 z-50 w-[95%] max-w-7xl -translate-x-1/2">
+    <header className="w-full">
       <nav
         className="
           flex items-center justify-between
-          rounded-[20px]
           border border-white/20
-          bg-white/60
+          bg-white
           px-6 py-4
           shadow-[0_8px_40px_rgba(0,0,0,0.08)]
           backdrop-blur-2xl
         "
       >
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
 
           <div>
             <img
@@ -29,9 +29,9 @@ export default function Navbar() {
             <h1 className="text-[1.5rem] font-semibold tracking-tight text-zinc-900">
               Look<span className="text-pink font-bold">.Book</span>
             </h1>
-            <span className="text-black/50 text-[12px]">Your fashion guide</span>
+            {/* <span className="text-black/50 text-[12px]">Your fashion guide</span> */}
           </div>
-        </div>
+        </Link>
 
         <div
           className="
@@ -42,7 +42,8 @@ export default function Navbar() {
             p-1
           "
         >
-          <button
+          <Link
+            href="/"
             className="
               rounded-full
              button-glass
@@ -54,10 +55,11 @@ export default function Navbar() {
               hover:scale-[1.02]
             "
           >
-            Explore
-          </button>
+            Winter
+          </Link>
 
-          <button
+          <Link
+            href="/trends"
             className="
               rounded-full
               px-5 py-2
@@ -68,10 +70,11 @@ export default function Navbar() {
               hover:text-zinc-900
             "
           >
-            Trends
-          </button>
+            Spring
+          </Link>
 
-          <button
+          <Link
+            href="/wardrobe"
             className="
               rounded-full
               px-5 py-2
@@ -82,10 +85,11 @@ export default function Navbar() {
               hover:text-zinc-900
             "
           >
-            Wardrobe
-          </button>
+            Summer
+          </Link>
 
-          <button
+          <Link
+            href="/saved"
             className="
               rounded-full
               px-5 py-2
@@ -96,20 +100,21 @@ export default function Navbar() {
               hover:text-zinc-900
             "
           >
-            Saved
-          </button>
+            Fall
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
-          <button>
+          <Link href="/search">
             <Search size={20} />
-          </button>
+          </Link>
 
-          <button>
+          <Link href="/notifications">
             <Bell size={20} />
-          </button>
+          </Link>
 
-          <button
+          <Link
+            href="/profile"
             className="
               flex items-center gap-2
               rounded-full
@@ -120,7 +125,7 @@ export default function Navbar() {
             "
           >
             <User size={20} />
-          </button>
+          </Link>
         </div>
       </nav>
     </header>
