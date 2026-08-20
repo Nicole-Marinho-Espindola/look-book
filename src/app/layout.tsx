@@ -11,10 +11,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className=" container">
-          <Navbar />
-          <div className="flex gap-x-5">
-            <Sidebar />
+        <div className="flex container">
+          <Sidebar />
+          <div className="">
+            <Navbar />
             {children}
           </div>
         </div>

@@ -35,7 +35,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/features/dashboard/components/trend/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]
