@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Sidebar() {
     return (
-        <nav className="relative h-screen flex items-start rounded-b-[20px] bg-white px-6 py-4 shadow flex-col">
+        <nav className="relative flex h-screen shrink-0 flex-col items-start rounded-b-[20px] bg-white px-6 py-4 shadow">
            <Link href="/" className="center gap-2 hover:bg-pink/50 px-4 py-2 rounded-lg transition-colors duration-300">
               <House size={20} />
               <span>Explore</span>

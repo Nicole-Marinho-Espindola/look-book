@@ -11,9 +11,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex container">
+        <div className="container flex min-h-screen w-full">
           <Sidebar />
-          <div className="">
+          <div className="min-w-0 flex-1">
             <Navbar />
             {children}
           </div>

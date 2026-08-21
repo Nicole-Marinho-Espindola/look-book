@@ -1,5 +1,7 @@
 export interface TrendProps {
-    id?: number;
-    season?: string;
-    trendText?: string;
+  id: number;
+  position: number;
+  trendText: string;
+  category: string;
+  posts: string;
 }

@@ -1,14 +1,52 @@
 import Image from "next/image";
 import type { CardProps } from "@/types/card";
 import Link from "next/link";
+import { Heart } from "lucide-react";
 
-export default function Card({title, image, userId}: CardProps) {
-    return (
-        <Link href={`/wardrobe/${userId}`} className="relative group w-full h-auto rounded-2xl overflow-hidden">
-            <Image src={image} alt={title} width={300} height={200} className="h-full w-full object-fill" />
-            <div className="p-4">
-                <p className="group-hover:opacity-100 opacity-0 absolute bottom-0 left-0 right-0 button-glass border-none! text-white p-2">{title}</p>
+const formatClasses: Record<CardProps["format"], string> = {
+  square: "aspect-square",
+  portrait: "aspect-[4/5]",
+  landscape: "aspect-[4/3]",
+  tall: "aspect-[3/4]",
+};
+
+export default function Card({
+  title,
+  image,
+  userId,
+  author,
+  category,
+  categoryColor,
+  likes,
+  format,
+}: CardProps) {
+  return (
+    <article className="mb-4 break-inside-avoid overflow-hidden rounded-[1.35rem] bg-white shadow-[0_12px_35px_rgba(24,24,27,0.06)] ring-1 ring-zinc-950/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(24,24,27,0.12)]">
+      <Link href={`/wardrobe/${userId}`} className="group block">
+        <div className={`relative overflow-hidden bg-zinc-100 ${formatClasses[format]}`}>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 40vw, 25vw"
+            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent opacity-70 transition group-hover:opacity-90" />
+          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-zinc-800 backdrop-blur">
+            {category}
+          </span>
+          <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+            <h2 className="font-instrument text-2xl leading-none">{title}</h2>
+            <div className="mt-3 flex items-center justify-between text-xs text-white/85">
+              <span>{author}</span>
+              <span className="flex items-center gap-1.5">
+                <Heart size={14} />
+                {likes.toLocaleString("pt-BR")}
+              </span>
             </div>
-        </Link>
-    )
+          </div>
+        </div>
+      </Link>
+    </article>
+  );
 }
