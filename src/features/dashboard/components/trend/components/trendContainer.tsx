@@ -10,11 +10,8 @@ export default function TrendContainer({
   return (
     <Link
       href={`/trends?topic=${encodeURIComponent(trendText)}`}
-      className="group flex items-center gap-3 border-b border-zinc-200/80 py-4 last:border-0"
+      className="group flex items-center gap-3 py-3 last:border-0"
     >
-      <span className="font-instrument text-3xl text-zinc-300 transition group-hover:text-pink">
-        {String(position).padStart(2, "0")}
-      </span>
       <div className="min-w-0 flex-1">
         <span className="block text-[0.65rem] font-medium uppercase tracking-[0.12em] text-zinc-400">
           {category}

@@ -29,14 +29,13 @@ export default function Card({
             alt={title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 40vw, 25vw"
-            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            className="object-cover transition duration-500"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent opacity-70 transition group-hover:opacity-90" />
-          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-zinc-800 backdrop-blur">
+          <div style={{ backgroundColor: categoryColor || "#fff" }} className={"absolute left-3 top-3 rounded-full px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-zinc-800 backdrop-blur"}>
             {category}
-          </span>
+          </div>
           <div className="absolute inset-x-0 bottom-0 p-4 text-white">
-            <h2 className="font-instrument text-2xl leading-none">{title}</h2>
             <div className="mt-3 flex items-center justify-between text-xs text-white/85">
               <span>{author}</span>
               <span className="flex items-center gap-1.5">
