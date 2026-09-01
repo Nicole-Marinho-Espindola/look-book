@@ -1,0 +1,15 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 180"
+  preserveAspectRatio="none"
+>
+  <path
+    d="M14 116 C170 28 346 38 500 78 S810 34 984 78 S1104 150 1188 90"
+    fill="none"
+    stroke="#9d174d"
+    stroke-width="2"
+    stroke-dasharray="8 8"
+    opacity="0.48"
+    vector-effect="non-scaling-stroke"
+  />
+</svg>

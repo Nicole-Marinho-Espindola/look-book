@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { CardProps } from "@/types/card";
+import type { CardProps } from "@/types/dashboard/card";
 import Link from "next/link";
 import { Heart } from "lucide-react";
 

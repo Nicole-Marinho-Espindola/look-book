@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-pink: #9d174d;
+  --color-pink: #9D174D;
 
   --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-instrument: "Instrument Serif", ui-serif, Georgia, serif;

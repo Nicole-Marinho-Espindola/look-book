@@ -1,0 +1,40 @@
+@reference "../../../../../app/globals.css";
+.mood {
+  @apply flex flex-col items-center text-center;
+}
+
+.portraitArea {
+  @apply relative flex h-28 items-center justify-center;
+}
+
+.portrait {
+  @apply relative z-10 h-[5.5rem] w-[5.5rem] overflow-hidden rounded-full border-2 border-white bg-zinc-200 shadow-md;
+}
+
+.portraitImage {
+  @apply object-cover;
+}
+
+.activeRings {
+  @apply pointer-events-none absolute inset-0 flex items-center justify-center;
+}
+
+.activeRings span {
+  @apply absolute h-[6.5rem] w-[6.5rem] rounded-[48%] border border-pink/45;
+}
+
+.activeRings span:last-child {
+  @apply h-28 w-28 rotate-12 border-2 border-pink/30;
+}
+
+.currentMood {
+  @apply absolute -right-8 bottom-1 z-20 rotate-6 rounded-md bg-[#f3d1b8] px-2 py-1 text-[0.5rem] font-semibold uppercase leading-tight tracking-wide text-zinc-700 shadow-sm;
+}
+
+.moodName {
+  @apply font-instrument text-xl leading-none text-zinc-900;
+}
+
+.lookCount {
+  @apply mt-2 text-xs text-zinc-500;
+}

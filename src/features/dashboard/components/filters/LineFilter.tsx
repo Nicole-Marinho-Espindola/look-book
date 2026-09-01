@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { SlidersHorizontal } from "lucide-react";
-import type { FilterProps, LineFiltersProps } from "@/types/filters";
+import type { FilterProps, LineFiltersProps } from "@/types/dashboard/filters";
 
 function FilterButton({
   filter,

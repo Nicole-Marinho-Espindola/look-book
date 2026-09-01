@@ -1,4 +1,4 @@
-import type { Filter } from "@/types/filters";
+import type { Filter } from "@/types/dashboard/filters";
 
 export const filterMock: Filter[] = [
    {

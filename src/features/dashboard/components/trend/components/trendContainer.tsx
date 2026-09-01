@@ -1,4 +1,4 @@
-import type { TrendProps } from "@/types/trend";
+import type { TrendProps } from "@/types/dashboard/trend";
 import Link from "next/link";
 
 export default function TrendContainer({

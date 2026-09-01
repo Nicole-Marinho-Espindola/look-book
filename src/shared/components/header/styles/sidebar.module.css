@@ -1,0 +1,13 @@
+@reference "../../../../app/globals.css";
+
+.item {
+  @apply flex items-center gap-2 rounded-full px-4 py-2 transition-colors duration-300;
+}
+
+.item:hover {
+  @apply bg-pink/10 text-pink font-semibold;
+}
+
+.item:focus-visible {
+  @apply outline-2 outline-offset-2 outline-pink ;
+}

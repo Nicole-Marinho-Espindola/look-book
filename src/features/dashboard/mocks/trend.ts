@@ -1,4 +1,4 @@
-import type { TrendProps } from "@/types/trend";
+import type { TrendProps } from "@/types/dashboard/trend";
 
 export const trendsMock: TrendProps[] = [
   {

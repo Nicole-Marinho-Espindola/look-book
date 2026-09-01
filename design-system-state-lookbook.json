@@ -1,0 +1,16 @@
+{
+  "runId": "lookbook-editorial-orbit-2026-08-24",
+  "fileKey": "WBtDj5COpKE5vrzkefw9SX",
+  "phase": "phase1-complete",
+  "entities": {
+    "collections": {
+      "primitives": "VariableCollectionId:3:2",
+      "semantic": "VariableCollectionId:5:2"
+    },
+    "pages": {},
+    "components": {},
+    "frames": {}
+  },
+  "completedSteps": ["phase0", "phase1"],
+  "pendingValidations": ["foundations-docs", "homepage-final"]
+}

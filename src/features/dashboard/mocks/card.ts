@@ -1,5 +1,5 @@
 import squareImage from "@/shared/images/image.jpeg";
-import type { CardProps } from "@/types/card";
+import type { CardProps } from "@/types/dashboard/card";
 
 export const cardsMock: CardProps[] = [
   {
