@@ -5,7 +5,6 @@ export default function Navbar() {
   return (
     <header className="w-full">
       <nav className="flex items-center justify-between px-10 py-5">
-
         <div className="flex items-center justify-center gap-2 text-sm text-zinc-900">
           <Sun size={20} />
           <span>7C Oslo - Late Winter Archive</span>

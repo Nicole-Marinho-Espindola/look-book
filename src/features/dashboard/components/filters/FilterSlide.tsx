@@ -2,19 +2,19 @@ import Link from "next/link";
 import React from "react";
 
 export default function SlideFilter() {
-    return (
-        <div
-          className="
+  return (
+    <div
+      className="
             hidden md:flex
             items-center gap-2
             rounded-full
             bg-pink/3
             p-1
           "
-        >
-          <Link
-            href="/"
-            className="
+    >
+      <Link
+        href="/"
+        className="
               rounded-full
              button-glass
               px-5 py-2
@@ -24,13 +24,13 @@ export default function SlideFilter() {
               duration-300
               hover:scale-[1.02]
             "
-          >
-            Winter
-          </Link>
+      >
+        Winter
+      </Link>
 
-          <Link
-            href="/trends"
-            className="
+      <Link
+        href="/trends"
+        className="
               rounded-full
               px-5 py-2
               text-sm text-zinc-600
@@ -39,13 +39,13 @@ export default function SlideFilter() {
               hover:bg-pink/25
               hover:text-zinc-900
             "
-          >
-            Spring
-          </Link>
+      >
+        Spring
+      </Link>
 
-          <Link
-            href="/wardrobe"
-            className="
+      <Link
+        href="/wardrobe"
+        className="
               rounded-full
               px-5 py-2
               text-sm text-zinc-600
@@ -54,13 +54,13 @@ export default function SlideFilter() {
               hover:bg-white/70
               hover:text-zinc-900
             "
-          >
-            Summer
-          </Link>
+      >
+        Summer
+      </Link>
 
-          <Link
-            href="/saved"
-            className="
+      <Link
+        href="/saved"
+        className="
               rounded-full
               px-5 py-2
               text-sm text-zinc-600
@@ -69,9 +69,9 @@ export default function SlideFilter() {
               hover:bg-white/70
               hover:text-zinc-900
             "
-          >
-            Fall
-          </Link>
-        </div>
-    )
+      >
+        Fall
+      </Link>
+    </div>
+  );
 }

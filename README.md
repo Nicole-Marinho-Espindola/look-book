@@ -152,12 +152,12 @@ npm run build
 npm run start
 ```
 
-| Script | Finalidade |
-| --- | --- |
-| `npm run dev` | Inicia o servidor de desenvolvimento |
-| `npm run lint` | Executa as verificações do ESLint |
-| `npm run build` | Gera o build de produção |
-| `npm run start` | Executa o build de produção |
+| Script          | Finalidade                           |
+| --------------- | ------------------------------------ |
+| `npm run dev`   | Inicia o servidor de desenvolvimento |
+| `npm run lint`  | Executa as verificações do ESLint    |
+| `npm run build` | Gera o build de produção             |
+| `npm run start` | Executa o build de produção          |
 
 ### Docker
 

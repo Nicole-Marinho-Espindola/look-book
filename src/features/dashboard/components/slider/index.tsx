@@ -1,27 +1,16 @@
-
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
-import moodImage from "@/shared/images/look.jpg";
 import styles from "./styles/slider.module.css";
 import sliderLine from "@/shared/images/svg/slider-line.svg";
 import { sliderMock } from "@/features/dashboard/mocks/slider";
 
-const moods = [
-  { name: "Soft Power", looks: 214, position: "50% 18%" },
-  { name: "City Ease", looks: 328, position: "50% 32%" },
-  { name: "Off Duty", looks: 487, position: "50% 45%", active: true },
-  { name: "Y2K Energy", looks: 156, position: "50% 58%" },
-  { name: "Dark Romance", looks: 289, position: "50% 72%" },
-];
-
 export default function Slider() {
   return (
-    <section 
+    <section
       className="relative mb-8 min-h-60 w-full overflow-hidden rounded-3xl rounded-bl-[3rem] rounded-tr-[3.75rem] border border-[#fff5f0] bg-[#fffdfc]"
       aria-labelledby="mood-orbit-title"
-     >
+    >
       <div className="w-full overflow-x-auto py-7">
         <div className="relative mx-auto min-h-44 min-w-[960px] max-w-[1320px]">
           <Image
@@ -39,7 +28,7 @@ export default function Slider() {
           <div className="relative z-10 grid grid-cols-[repeat(5,minmax(120px,1fr))_150px] items-center gap-5 pl-8">
             {sliderMock.map((mood) => (
               <article className={styles.mood} key={mood.name}>
-                <div className={styles.portraitArea}>
+                <div className="relative flex h-28 items-center justify-center">
                   {mood.isActive && (
                     <div className={styles.activeRings} aria-hidden="true">
                       <span />
@@ -47,13 +36,13 @@ export default function Slider() {
                     </div>
                   )}
 
-                  <div className={styles.portrait}>
+                  <div className="relative z-10 h-[5.5rem] w-[5.5rem] overflow-hidden rounded-full border-2 border-white bg-zinc-200 shadow-md">
                     <Image
                       src={mood.image}
                       alt={mood.name}
                       fill
                       sizes="88px"
-                      className={styles.portraitImage}
+                      className="object-cover"
                       style={{ objectPosition: mood.position }}
                     />
                   </div>
@@ -63,8 +52,10 @@ export default function Slider() {
                   )}
                 </div>
 
-                <h3 className={styles.moodName}>{mood.name}</h3>
-                <p className={styles.lookCount}>{mood.looks} looks</p>
+                <h3 className="font-instrument text-xl leading-none text-zinc-900">
+                  {mood.name}
+                </h3>
+                <p className="mt-2 text-xs text-zinc-500">{mood.looks} looks</p>
               </article>
             ))}
 

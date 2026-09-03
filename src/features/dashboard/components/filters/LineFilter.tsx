@@ -4,11 +4,7 @@ import { useMemo, useState } from "react";
 import { SlidersHorizontal } from "lucide-react";
 import type { FilterProps, LineFiltersProps } from "@/types/dashboard/filters";
 
-function FilterButton({
-  filter,
-  isSelected,
-  onSelect,
-}: FilterProps) {
+function FilterButton({ filter, isSelected, onSelect }: FilterProps) {
   return (
     <button
       type="button"
@@ -45,13 +41,13 @@ export default function LineFilters({ filters }: LineFiltersProps) {
           />
         ))}
 
-          <button
-            type="button"
-            aria-label="Abrir filtros"
-            className="center h-9 w-9 rounded-full text-zinc-600 transition hover:text-pink"
-          >
-            <SlidersHorizontal size={16} />
-          </button>
+        <button
+          type="button"
+          aria-label="Abrir filtros"
+          className="center h-9 w-9 rounded-full text-zinc-600 transition hover:text-pink"
+        >
+          <SlidersHorizontal size={16} />
+        </button>
       </div>
     </section>
   );
