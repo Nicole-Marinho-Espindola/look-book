@@ -1,0 +1,32 @@
+name: Pipeline Look Book
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Preparar para Build, Instalar dependências e testar
+        run: |
+          npm install
+          npm test
+          npm run test:coverage
+          npm run prepare
+          npm run typecheck
+          npm run format:check
+          npm run lint
+          npm run build
